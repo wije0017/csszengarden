@@ -1,0 +1,750 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline|Major+Mono+Display|Raleway:100,100i,300,300i,400,400i,700,900');
+
+
+/* CSS RESET */
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+
+
+
+/* BASE STYLES */
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+.page-wrapper {
+  display: flex;
+  flex-flow: column;
+  position: relative;
+
+  font-size: 16px;
+}
+
+
+h1 {
+  font-family: 'Major Mono Display', monospace;
+  font-size: 16px;
+
+  padding: 0.75em;
+  background-color: #f83737;
+  color: #fff;
+  text-align: center;
+}
+
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+
+  padding: 0.75em;
+  background-color: #fce83b;
+  text-align: center;
+}
+
+
+h2::before {
+  content: open-quote;
+}
+
+
+h2::after {
+  content: close-quote;
+}
+
+
+h2 abbr {
+  text-decoration: none;
+  color: #f83737;
+  font-family: 'Major Mono Display', monospace;
+}
+
+
+h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+
+  padding: 0.75em;
+}
+
+
+p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+
+  line-height: 1.5;
+  padding: 0.75em 1.2em;
+}
+
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+
+li {
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+
+/*********** CUSTOM STYLES ***********/
+
+/* INTRO */
+
+.summary {
+  margin-top: 20px;
+  padding: 50px;
+  text-align: center;
+}
+
+
+.summary a::before {
+  content: url("../css/download.png");
+
+  /*<div>Icons made by <a href="https://www.flaticon.com/authors/pixel-buddha" title="Pixel Buddha">Pixel Buddha</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> */
+
+  padding-right: 0.75em;
+}
+
+
+.summary a {
+  text-decoration: none;
+  color: #4b4b4b;
+  font-weight: 700;
+  padding: 0.75em;
+}
+
+
+.preamble h3 {
+  background-color: #f83737;
+  color: #fff;
+}
+
+
+/* MAIN */
+
+
+.explanation {
+  background-color: #fce83b;
+}
+
+
+.main .explanation h3 {
+  border: none;
+}
+
+
+.participation h3 {
+  margin-top: 30px;
+  background-color: #0a68f5;
+  color: #fff;
+}
+
+
+.benefits h3 {
+  background-color: #0a68f5;
+  color: #fff;
+}
+
+
+.requirements h3 {
+  background-color: #0a68f5;
+  color: #fff;
+}
+
+.requirements p:nth-child(6) {
+  font-size: 16px;
+  font-style: italic;
+  text-align: center;
+  padding: 30px;
+  margin-top: 20px;
+  border-top: 1px solid rgb(180, 180, 180);
+  border-width: thin;
+}
+
+
+/* FOOTER */
+
+
+footer {
+  background-color: #fce83b;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  padding: 50px;
+}
+
+
+footer a {
+  padding: 10px;
+}
+
+
+footer .zen-validate-html {
+  visibility: hidden;
+  position: relative;
+}
+
+
+footer .zen-validate-html::after {
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: url("../css/html-5-16px.png");
+
+  /* <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> */
+}
+
+
+footer .zen-validate-css {
+  visibility: hidden;
+  position: relative;
+}
+
+
+footer .zen-validate-css::after {
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: url("../css/css-16px.png");
+
+  /* <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> */
+}
+
+
+footer .zen-license {
+  visibility: hidden;
+  position: relative;
+}
+
+
+footer .zen-license::after {
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: url("../css/creative-commons-license-symbol-16px.png");
+
+  /* <div>Icons made by <a href="https://www.flaticon.com/authors/simpleicon" title="SimpleIcon">SimpleIcon</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> */
+}
+
+
+footer .zen-accessibility {
+  visibility: hidden;
+  position: relative;
+}
+
+
+footer .zen-accessibility::after {
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: url("../css/accessibility-16px.png");
+
+  /* <div>Icons made by <a href="https://www.flaticon.com/authors/twitter" title="Twitter">Twitter</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> */
+}
+
+
+footer .zen-github {
+  visibility: hidden;
+  position: relative;
+}
+
+
+footer .zen-github::after {
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: url("../css/github-logo-16px.png");
+
+  /* <div>Icons made by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> */
+}
+
+
+/* SIDEBAR */
+
+
+.sidebar {
+  background-color: #f83737;
+  color: #fff;
+}
+
+
+.sidebar .design-name {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.1em;
+  font-weight: 400;
+  color: #fff;
+}
+
+
+.sidebar .designer-name,
+.sidebar .designer-name::before {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.1em;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+.sidebar ul li {
+  padding: 20px;
+}
+
+
+.select {
+  margin-top: 0;
+}
+
+
+.select,
+.resources {
+  background-color: #000;
+  color: #fff;
+}
+
+
+.design-selection ul li {
+  font-style: italic;
+  color: #ebebeb;
+}
+
+
+.design-name {
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+
+.designer-name {
+  font-style: normal;
+}
+
+
+.design-selection ul li:hover {
+  background-color: #0a68f5;
+}
+
+
+.archives {
+  display: none;
+}
+
+
+.design-archives ul li {
+  margin: 0;
+}
+
+
+.next,
+.viewall {
+  background-color: #000;
+}
+
+
+.next a,
+.viewall a {
+  color: #fff;
+}
+
+
+.zen-resources {
+  background-color: #fce83b;
+  color: #000;
+}
+
+
+.zen-resources ul li:hover {
+  background-color: #0a68f5;
+}
+
+
+.wrapper {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+
+.design-archives {
+  grid-row: 1;
+}
+
+
+.select,
+.resources {
+  display: none;
+}
+
+
+
+
+/* MEDIA QUERY FOR MIN-WIDTH: 425PX (MOBILE MEDIUM/LARGE) */
+
+
+
+
+@media screen and (min-width: 425px) {
+
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+
+  .design-archives {
+    grid-row: 1;
+  }
+
+
+  .design-selection nav ul,
+  .zen-resources ul,
+  .design-archives ul {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+
+  .design-selection nav ul li,
+  .zen-resources ul li {
+    padding: 40px;
+    border-top: 1px solid #fce83b;
+    margin: 10px;
+  }
+
+
+  .select,
+  .resources {
+    display: none;
+  }
+}
+
+
+
+/* MEDIA QUERY FOR MIN-WIDTH: 768PX (TABLET) */
+
+
+
+@media screen and (min-width: 768px) {
+
+
+  h2 {
+    font-size: 64px;
+  }
+
+
+  .page-wrapper {
+    font-size: 1.5em;
+  }
+
+
+  .requirements p:nth-child(6) {
+    font-size: 22px;
+  }
+}
+
+
+
+/* MEDIA QUERY FOR MIN-WIDTH: 1024PX  (DESKTOP/LAPTOP)*/
+
+
+
+@media screen and (min-width: 1024px) {
+
+
+  h1 {
+    font-size: 24px;
+  }
+
+
+  h2 {
+    font-size: 128px;
+  }
+
+
+  h3 {
+    font-size: 36px;
+  }
+
+
+  p {
+    font-size: 18px;
+  }
+
+
+  .preamble,
+  .explanation,
+  .participation,
+  .benefits,
+  .requirements {
+    padding: 50px;
+  }
+
+
+  .zen-resources {
+    background-color: #f83737;
+  }
+
+
+  .zen-resources ul li a {
+    color: #fff;
+  }
+
+
+  .next a,
+  .viewall a {
+    font-size: 24px;
+  }
+
+
+  .page-wrapper {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-areas:
+      "header sidebar"
+      "summary sidebar"
+      "main sidebar"
+      "secondmain sidebar"
+
+  }
+
+
+  header {
+    grid-area: header;
+  }
+
+
+  .summary {
+    grid-area: summary;
+  }
+
+
+  .preamble {
+    grid-area: main;
+  }
+
+
+  .main {
+    grid-area: main;
+  }
+
+
+  .sidebar {
+    grid-area: sidebar;
+  }
+
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+
+  .design-archives {
+    grid-row: 1;
+  }
+
+
+  .requirements p:nth-child(6) {
+    font-size: 32px;
+  }
+
+
+  footer {
+    position: absolute;
+    width: 100%;
+    padding: 100px
+  }
+
+
+  .design-selection nav ul,
+  .zen-resources ul,
+  .design-archives ul {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+
+  .design-selection nav ul li,
+  .zen-resources ul li {
+    padding: 20px;
+    font-size: 12px;
+  }
+
+  /* FOOTER ICONS*/
+
+  footer .zen-validate-html::after {
+    content: url("../css/html-5.png");
+  }
+
+
+  footer .zen-validate-css::after {
+    content: url("../css/css.png");
+  }
+
+
+  footer .zen-license::after {
+    content: url("../css/creative-commons-license-symbol.png")
+  }
+
+
+  footer .zen-accessibility::after {
+    content: url("../css/accessibility.png");
+  }
+
+
+  footer .zen-github::after {
+    content: url("../css/github-logo.png");
+  }
+
+}
